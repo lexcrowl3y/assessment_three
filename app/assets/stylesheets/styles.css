@@ -1,0 +1,469 @@
+/* site styles */
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Work Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.3em;
+  letter-spacing: .03em;
+}
+
+p, b, a, label {
+  line-height: 1.2em;
+  letter-spacing: .02em;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* header */
+
+.header > h1 {
+  font-family: "Pacifico", sans-serif;
+  font-size: 3em;
+}
+
+.header > p {
+  font-family: "Quicksand", sans-serif;
+  margin-left: 2%;
+}
+
+/* banner */
+
+.banner {
+  background: rgba(203, 149, 48, 0.67);
+  display: none;
+}
+
+.banner_content {
+  padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.banner_text {
+  color: #1d1d1d !important;
+  flex-grow: 1;
+  line-height: 1.4;
+  font-family: "Quicksand", sans-serif;
+}
+
+.banner_close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.banner_text,
+.banner_close {
+  color: #ffffff;
+}
+
+
+.header {
+  background-color: #04AA6D;
+  color: #ffffff;
+  padding: 15px;
+  border-bottom-style: solid;
+  border-color: darkgoldenrod;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #f2f2f2;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li a {
+	text-decoration: none;
+	color: #333;
+	display: block;
+}
+
+.menu li:hover {
+  background-color: #4b9ebe;
+}
+
+#user_status { 
+	display: none;
+	text-align: left;
+
+}
+
+/* Some buttons dusting */
+
+#signoutbtn {
+	display: none;
+}
+
+.fa-circle-xmark {
+	line-height: 0.85em !important;
+	font-size: 1.9em !important;
+	color: #1d1d1d;
+}
+
+#laside {
+	/*height: 600px;*/
+	background-color: #f2f2f2;
+  padding: 15px;
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/*#team_welcome > img {
+	max-width: 100%;
+}*/
+
+.aside {
+  background-color: #f2f2f2;
+  padding: 15px;
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* image slider */
+
+.slider ul { 
+  list-style: none; 
+} 
+  
+.slider li { 
+  position: relative;
+} 
+
+.slider img {
+  max-width: 100%;
+  height: 320px;
+}
+  
+.slider li { display: none; }
+  
+.slider li.active { 
+  display: inline-block; 
+} 
+  
+.slider .caption { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: #fff; 
+  font-size: 18px; 
+  padding: 10px; 
+  text-align: center; 
+}
+
+/* Forms */
+
+/*#form_intro {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  color: #333;
+}*/
+
+input.form_input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  margin-top: 1em;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  /*width: 70%;*/
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.left_div {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.right_div {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* table */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.lft {
+  text-align: left;
+  padding-left: 1em;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* tooltips (styling Pseudo-Elements::before &::after) */
+
+[data-tip] {
+  position: relative;
+}
+
+[data-tip]:before {
+  /* hides the tooltip when not hovered */
+  display: none;
+  content:'';
+  /* create the triangle */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #bfbfbf; 
+  /* position triangle */
+  position: absolute;
+  top: 30px;
+  left: 35px;
+}
+
+[data-tip]:after {
+  /* required to hide tip content when not hovered */
+  display: none;
+  /* set data-tip attribute as content */
+  content: attr(data-tip);
+  /* position tip content (absolute fixes the tip over other form field below and retains overall form size) */
+  position: absolute;
+  top:35px;
+  /* style up content of tip */
+  padding: 5px 8px;
+  background: #bfbfbf;
+  color: #fff;
+  z-index: 9;
+  font-size: 0.75em;
+  line-height: 18px;
+  border-radius: 3px;
+}
+
+[data-tip]:hover:before,
+[data-tip]:hover:after {
+  display:block;
+}
+
+/* password functionality styles */
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  font-family: "Quicksand", sans-serif;
+  background-color: #f2f2f2;
+  /*background: #f1f1f1;*/
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#message h5 { 
+  color: #333; 
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 1em;
+}
+
+#add {
+  display: none;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  font-family: FontAwesome;
+  position: relative;
+  left: -35px;
+  content: "\f00c";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  font-family: FontAwesome;
+  position: relative;
+  left: -35px;
+  content: "\f00d";
+}
+
+#media {
+	display: none;
+	position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Clear floats after the columns */
+.forms::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .left_div, .right_div, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* support.html */
+
+#map {
+  width: 100% !important; 
+  height: 375px;
+  border-style: none;
+}
+
+.contact_help {
+  color: #4b9ebe;
+  cursor: pointer;
+}
+
+
+#footer {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: left;
+  padding: 15px;
+  display: flex;
+  align-items: stretch;
+  border-top-style: solid;
+  border-color: darkgoldenrod;
+}
+
+#more_ft a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#more_ft a:hover {
+  color: #4b9ebe;
+}
+
+#footer > #expl_ft, #cust_ft, #more_ft  {
+  flex-grow: 1; 
+}
+
+#footer > #img_ft {
+  flex-grow: 8;
+  text-align: center;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}

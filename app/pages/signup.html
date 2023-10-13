@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Assessment three</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&family=Work+Sans&display=swap" rel="stylesheet">
+    <link href='../assets/stylesheets/styles.css' rel="stylesheet">
+    <script src="https://kit.fontawesome.com/83237b1213.js"></script>
+    <script src='../assets/javascript/customization.js'></script>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner_content">
+        <div class="banner_text">
+          <strong>Congradulations!</strong> <span id="user_name"></span>, you are our lucky <strong>100th</strong> signup today and have won 2000 bonus points! We'll add them to your account right away. You can redeem them and any other points collected anytime. Have the best day ever!
+        </div>
+        <button class="banner_close" type="button"><i class="fa-solid fa-circle-xmark fa-lg"></i></button>
+      </div>
+    </div> 
+    <div class="header">
+      <h1>Fresh Foods</h1>
+      <p>Get big <b>rewards</b> everyday!.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-3 col-s-3 menu">
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li id="signupbtn"><a href="signup.html"><i class="fa-solid fa-user-plus"></i> Sign Up</a></li>
+          <li><a href="support.html"><i class="fa-solid fa-circle-info"></i> Support</a></li>
+          <li id="signoutbtn"><a href="index.html"><i class="fa-solid fa-user"></i> Sign Out</a></li>
+        </ul>
+        <div id="laside">
+          <div id="user_status">
+            <h3 id="name">Signed in as: <span id="ndata"></span></h3>
+            <hr>
+            <h3 id="points">Points Tally: 2100</h3>
+            <h3 id="value">Dollar Value: $390.00</h3>
+          </div>
+
+          <div id="team_welcome">
+            <div class="slider"> 
+              <ul> 
+                  <li> 
+                      <img src="../assets/images/team_4.jpg" alt="Fresh Food staff"> 
+                      <div class="caption">
+                        Nau Mai / Welcome to Fresh Foods 
+                      </div> 
+                  </li> 
+                  <li> 
+                      <img src="../assets/images/team_3.jpg" alt="Fresh Food staff"> 
+                      <div class="caption"> 
+                        Hello from all of us too ... 
+                      </div> 
+                  </li> 
+                  <li> 
+                      <img src="../assets/images/team_2.jpg" alt="Fresh Food staff"> 
+                      <div class="caption"> 
+                        Don't foget us, Hola! ... 
+                      </div> 
+                  </li> 
+                  <li> 
+                      <img src="../assets/images/team_1.jpg" alt="Fresh Food staff"> 
+                      <div class="caption"> 
+                        Okay lets get you signed up  
+                      </div> 
+                  </li> 
+              </ul> 
+            </div>
+            <h3>A warm welcome ... </h3>
+            <p>From the the team at Fresh Foods New Deli</p>
+          </div>  
+        </div>
+      </div>
+
+      <div class="col-6 col-s-9">
+        <hr>
+        <p id="form_intro">Joining up is easy, just complete the form below and your on the way to earning tons of rewards with the Fresh Foods loyalty card. Click into first name to get started ... </p>
+        <div class="container">
+          <div class="forms">
+            <form id="signupf" onsubmit="signup(); return false">
+
+              <div class="left_div">
+                <label for="fname">First Name: </label>
+              </div>
+              <div class="right_div" data-tip="please type your first name, then proceed to next field">
+                <input id="fname" class="form_input" type="text" name="fname" minlength="3" maxlength="50" placeholder="required" required>
+              </div>
+                 
+              <div class="left_div">
+                <label for="lname">Last Name: </label>
+              </div>
+              <div class="right_div" data-tip="please type your last name, proceed to next field">
+                <input id="lname" class="form_input" type="text" name="lname" minlength="3" maxlength="50"
+                placeholder="required" required>
+              </div>
+                  
+              <div class="left_div">
+                <label for="age">Age: </label> 
+              </div>
+              <div class="right_div" data-tip="age restriction applies: You must be at least 16 years old to sign up">
+                <input id="age" class="form_input" type="number" name="age" min="16" placeholder="required" required>
+              </div>
+                  
+              <div class="left_div">
+                <label for="email">Email: </label>
+              </div>
+              <div class="right_div" data-tip="please enter your email address, required">
+                <input id="email" class="form_input" type="text" name="email" minlength="5" maxlength="50" placeholder="required" required>
+              </div>
+                  
+              <div class="left_div">
+                <label for="phone">Phone number: </label>
+              </div>
+              <div class="right_div" data-tip="enter your mobile phone number to use our two stage verification">
+                <input id="phone" class="form_input" type="tel"  name="phone" minlength="8" maxlength="32" placeholder="not required">
+              </div>
+
+              <div class="left_div">
+                <label for="psw">Password: </label>
+              </div>
+              <div class="right_div" data-tip="click into me to launch the password assistant ...">
+                <input id="psw" class="form_input" type="password"  name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="* * * * * * * *" required>
+              </div>
+              
+              <input id="submit" type="submit" name="submit" value="Submit">
+            </form>
+          </div>
+          <div id="media">
+            <iframe id="embed" class="responsive-iframe" src="" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div id="promo_info">
+          <p>Sign up today and get 100 bonus points free! Plus every 100th sign up wins 2000 points every day! Don't miss out join now.</p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="col-3 col-s-12">
+        <div class="aside">
+          <div id="primary_aside_content">
+            <h2>Save Big this Week!</h2>
+            <hr>
+            <img src="../assets/images/chips.png" alt="Chips special at Fresh Foods">
+            <hr>
+            <img src="../assets/images/baccon.png" alt="Baccon special at Fresh Foods">
+          </div>
+          <div id="message">
+            <h3>Password Assistant</h3>
+            <hr>
+            <h5>A passord must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters. As you enter each requirement we will check it off over below. When you meet a requirement, the item listed below will change from red to green, showing a valid state. Once they are all checked green you can continue ...</h5>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid"><b>8 characters</b></p>
+          </div>
+          <div id="add">
+            <hr>
+            <img src="../assets/images/coke.png" alt="1.5l coke special at Fresh Foods">
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="expl_ft">
+        <h4>Explore Fresh Foods</h4>
+        <br>
+        <p>Fresh Foods loyalty card</p>
+        <p>Christmas Club</p>
+        <p>Gift Cards</p>
+        <p>Fuel Vouchers</p>
+      </div>
+      <div id="cust_ft">
+        <h4>Customer Sevices</h4>
+        <br>
+        <p>Contact us</p>
+        <p>Store finder</p>
+        <p>FAQs</p>
+        <p>Scam alert</p>
+        <p>Surveys</p>
+      </div>
+      <div id="more_ft">
+        <h4>Site build resources</h4>
+        <br>
+        <p><a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools</a></p>
+        <p><a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer">Stack Overflow</a></p>
+        <p><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></p>
+        <p><a href="https://jsfiddle.net" target="_blank" rel="noopener noreferrer">JSfiddle</a></p>
+        <p><a href="https://www.openpolytechnic.ac.nz" target="_blank" rel="noopener noreferrer">Open Polytechnic NZ</a></p>
+      </div>
+      <div id="img_ft">
+        <img src="../assets/images/social.png" alt="social media links">
+      </div> 
+    </div>
+  </body>
+</html>
+
+
+
+
+
